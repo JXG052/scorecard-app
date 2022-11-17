@@ -8,11 +8,13 @@
         <title>Scorecard App</title>
     </head>
     <body>
+        
         <table id ="table-1">
             <tr>
                 <td colspan="8" rowspan="2" id="comp-name">Competion Name: </td>
                 <td colspan="3" id="date">Date:</td>
                 <td colspan="3" id="indicate-tee">Indicate Tee Used</td>
+                <td></td>
 
             </tr>
             <tr>
@@ -22,6 +24,7 @@
                 <td class="handicap"id="playing-handicap">Playing Handicap</td>
                 <td colspan="2" class="rating" id="course-rating">Course Rating</td>
                 <td colspan="2" class="rating" id="course-rating">Slope Rating</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td class="player-name" colspan="8" id="player-a">Player A:</td>
@@ -30,7 +33,7 @@
                 <td class="player-details" id="player-a-playing-handicap"></td>
                 <td colspan="2" class="rating" id="course-rating-white">72</td>
                 <td colspan="2" class="rating" id="slope-rating-white">131</td>
-                
+                <td class="rating" id="tee-select-white"></td>
 
             </tr>
             <tr>
@@ -40,6 +43,7 @@
                 <td class="player-details" id="player-b-playing-handicap"></td>
                 <td colspan="2"  class="rating" id="course-rating-yellow">70.5</td>
                 <td colspan="2" class="rating" id="slope-rating-yellow">132</td>
+                <td class="rating" id="tee-select-yellow"></td>
             </tr>
             <tr>
                 <td class="player-name" colspan="8" id="player-c">Player C:</td>
@@ -48,6 +52,7 @@
                 <td class="player-details" id="player-c-playing-handicap"></td>
                 <td colspan="2" rowspan="2" class="rating" id="course-rating-red">68.7</td>
                 <td colspan="2" rowspan="2" class="rating" id="slope-rating-red">129</td>
+                <td rowspan="2" class="rating" id="tee-select-red"></td>
             </tr>
             <tr>
                 <td class="player-name" colspan="8" id="player-d">Player D:</td>
@@ -299,7 +304,8 @@
                 <td class="red-par" id="out-red-par">37</td>
                 <td class="empty"></td>
             </tr>
-            <tr>
+            
+            <tr id="h10-row">
                 <td class="hole-num">10</td>
                 <td class="marker-score" id="h10-marker-score"></td>
                 <td class="white-yards" id="h10-white-yards">407</td>
@@ -504,18 +510,18 @@
                 <td class="empty"></td>
             </tr>
             <tr>
-                <td colspan="6" align="right">Handicap</td>
-                <td class="handicap" id="a-handicap"></td>
-                <td class="handicap" id="b-handicap"></td>
-                <td class="handicap" id="c-handicap"></td>
-                <td class="handicap" id="d-handicap"></td>
+                <td colspan="6" id="handicap-heading">Handicap</td>
+                <td id="a-handicap"></td>
+                <td id="b-handicap"></td>
+                <td id="c-handicap"></td>
+                <td id="d-handicap"></td>
                 <td class="empty"></td>
                 <td class="empty"></td>
-                <td colspan="3" rowspan="2" valign="top" align="center">Score/Points:</td>
+                <td id="score-box" colspan="3" rowspan="2" valign="top" >Score/Points:</td>
 
             </tr>
             <tr>
-                <td colspan="6" align="right">Nett</td>
+                <td colspan="6"id="nett-heading">Nett</td>
                 <td class="score" id="nett-a-score"></td>
                 <td class="score" id="nett-b-score"></td>
                 <td class="score" id="nett-c-score"></td>
@@ -528,7 +534,7 @@
         </table>
     </body>
     <footer>
-        <p>Marker's Signature:</p>
-        <p>Player's Signature:</p>
+        <p class="signature" id="markers-signature">Marker's Signature:</p>
+        <p class="signature" id="players-signature">Player's Signature:</p>
     </footer>
 </html>
