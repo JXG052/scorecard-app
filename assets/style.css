@@ -6,16 +6,34 @@
     font-weight: bold;
     border:0.5pt solid black
 }
-#table-2{
-    width: 70%;
-    height:150vh;
-    margin: 25px auto;
+#table-2,
+#table-1{
+    width: 90%;
     border-collapse: collapse;
     box-shadow: 0px 10px 30px 5px rgba(0,0, 0, 0.15);
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+#table-1 .player-name,
+#comp-name{
+    width:90%;
+    
+}
+.player-details, 
+.handicap {
+   
+    
+    font-size: 6pt;
+    font-weight: lighter;
+}
+.rating{
+    font-size: 6pt;
+    font-weight: lighter;
+}
+
 .player-name,
-#comp-name {
+#comp-name,
+#date {
     text-align: left;
 }
 #comp-name{
@@ -52,4 +70,39 @@ vertical-align: top;
 }
 .handicap {
     background-color: lightgrey;
+}
+
+.white-yards,
+.yellow-yards,
+.par,
+.si,
+.net-score,
+.points,
+.red-yards,
+.red-par,
+.red-si,
+.heading,
+.marker-score,
+.hole-num
+{
+    font-size: 10pt;
+}
+.white-yards,
+.si,
+.net-score,
+.red-yards,
+.red-par,
+.red-si,
+.yellow-yards {
+    width:5px;}
+
+#table-2 .player-name{
+    width: 70px;
+    text-align: center;
+}
+
+#out-heading, 
+#in-heading,
+#total-heading{
+    font-size: 8pt;
 }
