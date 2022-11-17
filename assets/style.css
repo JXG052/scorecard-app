@@ -4,7 +4,11 @@
     text-align: center;
     font-weight: bold;   
 }
-
+body{
+    background-image:url(../images/augusta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 *, 
 :not(#handicap-heading),
 :not(#nett-heading){
@@ -136,6 +140,7 @@ footer{
     border: none;
     width:90%;
     margin:25px auto;
+    background-color: white;
 }
 p{
     width:50%;
