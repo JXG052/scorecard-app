@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border:0.5pt solid black
+}
+#table-2{
+    width: 70%;
+    height:150vh;
+    margin: 25px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 10px 30px 5px rgba(0,0, 0, 0.15);
+    align-items: center;
+}
+.player-name,
+#comp-name {
+    text-align: left;
+}
+#comp-name{
+vertical-align: top;
+}
+#course-rating-white,
+#slope-rating-white {
+    background-color:#FAF9F6
+}
+
+.yellow-yards,
+#course-rating-yellow,
+#slope-rating-yellow {
+    background-color: yellow;
+
+}
+.red-yards,
+.red-par,
+#course-rating-red,
+#slope-rating-red {
+    background-color:red;
+    color: white;
+}
+.si,
+.red-si{
+    color: #89CFF0;
+}
+
+#out-row,
+#in-row{
+   background-color: #FAF9F6;
+   border-top: 3pt solid black;
+   
+}
+.handicap {
+    background-color: lightgrey;
+}

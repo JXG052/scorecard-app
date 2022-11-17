@@ -4,82 +4,82 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/style.css">
         <title>Scorecard App</title>
     </head>
     <body>
-        <table border="1" width="100%">
+        <table id="table-2">
             <tr>
-                <td colspan="8" rowspan="2">Competion Name: </td>
-                <td colspan="3">Date:</td>
-                <td colspan="3">Indicate Tee Used</td>
-                <td colspan="1" ></td>
+                <td colspan="8" rowspan="2" id="comp-name">Competion Name: </td>
+                <td colspan="3" id="date">Date:</td>
+                <td colspan="3" id="indicate-tee">Indicate Tee Used</td>
+
             </tr>
             <tr>
 
-                <td class="handicap">Handicap Index</td>
-                <td class="handicap">Course Handicap</td>
-                <td class="handicap">Playing Handicap</td>
-                <td colspan="2">Course Rating</td>
-                <td colspan="2">Slope Rating</td>
+                <td class="handicap" id="handicap-index">Handicap Index</td>
+                <td class="handicap" id="course-handicap">Course Handicap</td>
+                <td class="handicap"id="playing-handicap">Playing Handicap</td>
+                <td colspan="2" class="rating" id="course-rating">Course Rating</td>
+                <td colspan="2" class="rating" id="course-rating">Slope Rating</td>
             </tr>
             <tr>
-                <td class="player" colspan="8">Player A:</td>
-                <td id="playera-hcp-i"></td>
-                <td></td>
-                <td></td>
-                <td colspan="2">72</td>
-                <td colspan="2">131</td>
+                <td class="player-name" colspan="8" id="player-a">Player A:</td>
+                <td class="player-details" id="player-a-handicap-index"></td>
+                <td class="player-details" id="player-a-course-handicap"></td>
+                <td class="player-details" id="player-a-playing-handicap"></td>
+                <td colspan="2" id="course-rating-white">72</td>
+                <td colspan="2" id="slope-rating-white">131</td>
                 
 
             </tr>
             <tr>
-                <td class="player" colspan="8">Player B:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colspan="2">70.5</td>
-                <td colspan="2">132</td>
+                <td class="player-name" colspan="8" id="player-b">Player B:</td>
+                <td class="player-details" id="player-b-handicap-index"></td>
+                <td class="player-details" id="player-b-course-handicap"></td>
+                <td class="player-details" id="player-b-playing-handicap"></td>
+                <td colspan="2" id="course-rating-yellow">70.5</td>
+                <td colspan="2" id="slope-rating-yellow">132</td>
             </tr>
             <tr>
-                <td class="player" colspan="8">Player C:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colspan="2" rowspan="2">68.7</td>
-                <td colspan="2" rowspan="2">129</td>
+                <td class="player-name" colspan="8" id="player-c">Player C:</td>
+                <td class="player-details" id="player-c-handicap-index"></td>
+                <td class="player-details" id="player-c-course-handicap"></td>
+                <td class="player-details" id="player-c-playing-handicap"></td>
+                <td colspan="2" rowspan="2" id="course-rating-red">68.7</td>
+                <td colspan="2" rowspan="2" id="slope-rating-red">129</td>
             </tr>
             <tr>
-                <td class="player" colspan="8">Player D:</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="player-name" colspan="8" id="player-d">Player D:</td>
+                <td class="player-details" id="player-d-handicap-index"></td>
+                <td class="player-details" id="player-d-course-handicap"></td>
+                <td class="player-details" id="player-d-playing-handicap"></td>
                 
             </tr>
             <tr>
-                <td rowspan="2">Hole</td>
-                <td rowspan="2">Marker Score</td>
-                <td rowspan="2">White Yards</td>
-                <td rowspan="2">Yellow Yards</td>
-                <td rowspan="2">Par</td>
-                <td rowspan="2">SI</td>
-                <td colspan="4">Players Score</td>
-                <td rowspan="2">Net Score</td>
-                <td rowspan="2">wlh</td>
-                <td rowspan="2">Red Yards</td>
-                
-                <td rowspan="2">Red Par</td>
-                <td rowspan="2">Red SI</td>
+                <td rowspan="2" class="heading" id="hole-heading">Hole</td>
+                <td rowspan="2" class="heading" id="marker-score-heading">Marker Score</td>
+                <td rowspan="2" class="heading" id="white-yards-heading">White Yards</td>
+                <td rowspan="2" class="heading" id="yellow-yards-heading">Yellow Yards</td>
+                <td rowspan="2" class="heading" id="par-heading">Par</td>
+                <td rowspan="2" class="heading" id="si-heading">SI</td>
+                <td colspan="4" class="heading" id="players-score-heading">Players Score</td>
+                <td rowspan="2" class="heading" id="net-score-heading">Net Score</td>
+                <td rowspan="2" class="heading" id="points heading">wlh</td>
+                <td rowspan="2" class="heading" id="red-yards-heading">Red Yards</td>
+                <td rowspan="2" class="heading" id="red-par-heading">Red Par</td>
+                <td rowspan="2" class="heading" id="red-si-heading">Red SI</td>
 
             </tr>
             <tr>
 
 
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
+                <td class="player-name" id="player-a-name">A</td>
+                <td class="player-name" id="player-b-name">B</td>
+                <td class="player-name" id="player-c-name">C</td>
+                <td class="player-name" id="player-d-name">D</td>
             <tr>
-                <td>1</td>
+                <td class="hole num">1</td>
                 <td class="marker-score" id="h1-marker-score"></td>
                 <td class="white-yards" id="h1-white-yards">160</td>
                 <td class="yellow-yards" id="h1-yellow-yards">146</td>
@@ -96,7 +96,7 @@
                 <td class="red-si" id="h1-red-si">17</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td class="hole-num">2</td>
                 <td class="marker-score" id="h2-marker-score"></td>
                 <td class="white-yards" id="h2-white-yards">489</td>
                 <td class="yellow-yards" id="h2-yellow-yards">465</td>
@@ -113,7 +113,7 @@
                 <td class="red-si" id="h2-red-si">11</td>
                 </tr>
             <tr>
-                <td>3</td>
+                <td class="hole-num">3</td>
                 <td class="marker-score" id="h3-marker-score"></td>
                 <td class="white-yards" id="h3-white-yards">324</td>
                 <td class="yellow-yards" id="h3-yellow-yards">314</td>
@@ -130,7 +130,7 @@
                 <td class="red-si" id="h3-red-si">9</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td class="hole-num">4</td>
                 <td class="marker-score" id="h4-marker-score"></td>
                 <td class="white-yards" id="h4-white-yards">433</td>
                 <td class="yellow-yards" id="h4-yellow-yards">417</td>
@@ -147,7 +147,7 @@
                 <td class="red-si" id="h4-red-si">1</td>
             </tr>
             <tr>
-                <td>5</td>
+                <td class="hole-num">5</td>
                 <td class="marker-score" id="h5-marker-score"></td>
                 <td class="white-yards" id="h5-white-yards">432</td>
                 <td class="yellow-yards" id="h5-yellow-yards">411</td>
@@ -164,7 +164,7 @@
                 <td class="red-si" id="h5-red-si">7</td>
             </tr>
             <tr>
-                <td>6</td>
+                <td class="hole-num">6</td>
                 <td class="marker-score" id="h6-marker-score"></td>
                 <td class="white-yards" id="h6-white-yards">483</td>
                 <td class="yellow-yards" id="h6-yellow-yards">473</td>
@@ -181,7 +181,7 @@
                 <td class="red-si" id="h6-red-si">5</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td class="hole-num">7</td>
                 <td class="marker-score" id="h7-marker-score"></td>
                 <td class="white-yards" id="h7-white-yards">256</td>
                 <td class="yellow-yards" id="h7-yellow-yards">234</td>
@@ -231,7 +231,7 @@
                 <td class="red-par" id="h9-red-par">3</td>
                 <td class="red-si" id="h9-red-si">15</td>
             </tr>
-            <tr>
+            <tr id="out-row">
                 <td class="empty"></td>
                 <td class="marker-score" id="out-marker-score"></td>
                 <td class="white-yards" id="out-white-yards">3143</td>
@@ -401,7 +401,7 @@
                 <td class="red-par" id="h18-red-par">5</td>
                 <td class="red-si" id="h18-red-si">10</td>
             </tr>
-            <tr>
+            <tr id="in-row">
                 <td class="empty"></td>
                 <td class="marker-score" id="in-marker-score"></td>
                 <td class="white-yards" id="in-white-yards">3067</td>
