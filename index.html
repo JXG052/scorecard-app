@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scorecard App</title>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <tr>
+                <td colspan="8" rowspan="2">Competion Name: </td>
+                <td colspan="3">Date:</td>
+                <td colspan="3">Indicate Tee Used</td>
+                <td colspan="1" ></td>
+            </tr>
+            <tr>
+
+                <td class="handicap">Handicap Index</td>
+                <td class="handicap">Course Handicap</td>
+                <td class="handicap">Playing Handicap</td>
+                <td colspan="2">Course Rating</td>
+                <td colspan="2">Slope Rating</td>
+            </tr>
+            <tr>
+                <td class="player" colspan="8">Player A:</td>
+                <td id="playera-hcp-i"></td>
+                <td></td>
+                <td></td>
+                <td colspan="2">72</td>
+                <td colspan="2">131</td>
+                
+
+            </tr>
+            <tr>
+                <td class="player" colspan="8">Player B:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2">70.5</td>
+                <td colspan="2">132</td>
+            </tr>
+            <tr>
+                <td class="player" colspan="8">Player C:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" rowspan="2">68.7</td>
+                <td colspan="2" rowspan="2">129</td>
+            </tr>
+            <tr>
+                <td class="player" colspan="8">Player D:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td rowspan="2">Hole</td>
+                <td rowspan="2">Marker Score</td>
+                <td rowspan="2">White Yards</td>
+                <td rowspan="2">Yellow Yards</td>
+                <td rowspan="2">Par</td>
+                <td rowspan="2">SI</td>
+                <td colspan="4">Players Score</td>
+                <td rowspan="2">Net Score</td>
+                <td rowspan="2">wlh</td>
+                <td rowspan="2">Red Yards</td>
+                
+                <td rowspan="2">Red Par</td>
+                <td rowspan="2">Red SI</td>
+
+            </tr>
+            <tr>
+
+
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            <tr>
+                <td>1</td>
+                <td class="marker-score" id="h1-marker-score"></td>
+                <td class="white-yards" id="h1-white-yards">160</td>
+                <td class="yellow-yards" id="h1-yellow-yards">146</td>
+                <td class="par" id="h1-par">3</td>
+                <td class="si" id="h1-si">15</td>
+                <td class="a-score" id="h1-a-score"></td>
+                <td class="b-score"id="h1-b-score"></td>
+                <td class="c-score" id="h1-c-score"></td>
+                <td class="d-score" id="h1-d-score"></td>
+                <td class="net-score" id="h1-nett-score"></td>
+                <td class="points" id="h1-points"></td>
+                <td class="red-yards" id="h1-red-yards">148</td>
+                <td class="red-par" id="h1-red-par">3</td>
+                <td class="red-si" id="h1-red-si">17</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="marker-score" id="h2-marker-score"></td>
+                <td class="white-yards" id="h2-white-yards">489</td>
+                <td class="yellow-yards" id="h2-yellow-yards">465</td>
+                <td class="par" id="h2-par">5</td>
+                <td class="si" id="h2-si">11</td>
+                <td class="a-score" id="h2-a-score"></td>
+                <td class="b-score"id="h2-b-score"></td>
+                <td class="c-score" id="h2-c-score"></td>
+                <td class="d-score" id="h2-d-score"></td>
+                <td class="net-score" id="h2-nett-score"></td>
+                <td class="points" id="h2-points"></td>
+                <td class="red-yards" id="h2-red-yards">434</td>
+                <td class="red-par" id="h2-red-par">5</td>
+                <td class="red-si" id="h2-red-si">11</td>
+                </tr>
+            <tr>
+                <td>3</td>
+                <td class="marker-score" id="h3-marker-score"></td>
+                <td class="white-yards" id="h3-white-yards">324</td>
+                <td class="yellow-yards" id="h3-yellow-yards">314</td>
+                <td class="par" id="h3-par">4</td>
+                <td class="si" id="h3-si">7</td>
+                <td class="a-score" id="h3-a-score"></td>
+                <td class="b-score"id="h3-b-score"></td>
+                <td class="c-score" id="h3-c-score"></td>
+                <td class="d-score" id="h3-d-score"></td>
+                <td class="net-score" id="h3-nett-score"></td>
+                <td class="points" id="h3-points"></td>
+                <td class="red-yards" id="h3-red-yards">306</td>
+                <td class="red-par" id="h3-red-par">4</td>
+                <td class="red-si" id="h3-red-si">9</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="marker-score" id="h4-marker-score"></td>
+                <td class="white-yards" id="h4-white-yards">433</td>
+                <td class="yellow-yards" id="h4-yellow-yards">417</td>
+                <td class="par" id="h4-par">4</td>
+                <td class="si" id="h4-si">3</td>
+                <td class="a-score" id="h4-a-score"></td>
+                <td class="b-score"id="h4-b-score"></td>
+                <td class="c-score" id="h4-c-score"></td>
+                <td class="d-score" id="h4-d-score"></td>
+                <td class="net-score" id="h4-nett-score"></td>
+                <td class="points" id="h4-points"></td>
+                <td class="red-yards" id="h4-red-yards">397</td>
+                <td class="red-par" id="h4-red-par">4</td>
+                <td class="red-si" id="h4-red-si">1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="marker-score" id="h5-marker-score"></td>
+                <td class="white-yards" id="h5-white-yards">432</td>
+                <td class="yellow-yards" id="h5-yellow-yards">411</td>
+                <td class="par" id="h5-par">4</td>
+                <td class="si" id="h5-si">1</td>
+                <td class="a-score" id="h5-a-score"></td>
+                <td class="b-score"id="h5-b-score"></td>
+                <td class="c-score" id="h5-c-score"></td>
+                <td class="d-score" id="h5-d-score"></td>
+                <td class="net-score" id="h5-nett-score"></td>
+                <td class="points" id="h5-points"></td>
+                <td class="red-yards" id="h5-red-yards">401</td>
+                <td class="red-par" id="h5-red-par">5</td>
+                <td class="red-si" id="h5-red-si">7</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="marker-score" id="h6-marker-score"></td>
+                <td class="white-yards" id="h6-white-yards">483</td>
+                <td class="yellow-yards" id="h6-yellow-yards">473</td>
+                <td class="par" id="h6-par">5</td>
+                <td class="si" id="h6-si">9</td>
+                <td class="a-score" id="h6-a-score"></td>
+                <td class="b-score"id="h6-b-score"></td>
+                <td class="c-score" id="h6-c-score"></td>
+                <td class="d-score" id="h6-d-score"></td>
+                <td class="net-score" id="h6-nett-score"></td>
+                <td class="points" id="h6-points"></td>
+                <td class="red-yards" id="h6-red-yards">441</td>
+                <td class="red-par" id="h6-red-par">5</td>
+                <td class="red-si" id="h6-red-si">5</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="marker-score" id="h7-marker-score"></td>
+                <td class="white-yards" id="h7-white-yards">256</td>
+                <td class="yellow-yards" id="h7-yellow-yards">234</td>
+                <td class="par" id="h7-par">4</td>
+                <td class="si" id="h7-si">17</td>
+                <td class="a-score" id="h7-a-score"></td>
+                <td class="b-score"id="h7-b-score"></td>
+                <td class="c-score" id="h7-c-score"></td>
+                <td class="d-score" id="h7-d-score"></td>
+                <td class="net-score" id="h7-nett-score"></td>
+                <td class="points" id="h7-points"></td>
+                <td class="red-yards" id="h7-red-yards">397</td>
+                <td class="red-par" id="h7-red-par">4</td>
+                <td class="red-si" id="h7-red-si">1</td>
+            </tr>
+            <tr>
+                <td class="hole-num">8</td>
+                <td class="marker-score" id="h8-marker-score"></td>
+                <td class="white-yards" id="h8-white-yards">397</td>
+                <td class="yellow-yards" id="h8-yellow-yards">386</td>
+                <td class="par" id="h8-par">4</td>
+                <td class="si" id="h8-si">3</td>
+                <td class="a-score" id="h8-a-score"></td>
+                <td class="b-score"id="h8-b-score"></td>
+                <td class="c-score" id="h8-c-score"></td>
+                <td class="d-score" id="h8-d-score"></td>
+                <td class="net-score" id="h8-nett-score"></td>
+                <td class="points" id="h8-points"></td>
+                <td class="red-yards" id="h8-red-yards">380</td>
+                <td class="red-par" id="h8-red-par">4</td>
+                <td class="red-si" id="h8-red-si">5</td>
+            </tr>
+            <tr>
+                <td class="hole-num">9</td>
+                <td class="marker-score" id="h9-marker-score"></td>
+                <td class="white-yards" id="h9-white-yards">169</td>
+                <td class="yellow-yards" id="h9-yellow-yards">157</td>
+                <td class="par" id="h9-par">3</td>
+                <td class="si" id="h9-si">13</td>
+                <td class="a-score" id="h9-a-score"></td>
+                <td class="b-score"id="h9-b-score"></td>
+                <td class="c-score" id="h9-c-score"></td>
+                <td class="d-score" id="h9-d-score"></td>
+                <td class="net-score" id="h9-nett-score"></td>
+                <td class="points" id="h9-points"></td>
+                <td class="red-yards" id="h9-red-yards">132</td>
+                <td class="red-par" id="h9-red-par">3</td>
+                <td class="red-si" id="h9-red-si">15</td>
+            </tr>
+            <tr>
+                <td class="empty"></td>
+                <td class="marker-score" id="out-marker-score"></td>
+                <td class="white-yards" id="out-white-yards">3143</td>
+                <td class="yellow-yards" id="out-yellow-yards">3004</td>
+                <td class="par" id="out-par">36</td>
+                <td class="empty">OUT</td>
+                <td class="a-score" id="out-a-score"></td>
+                <td class="b-score"id="out-b-score"></td>
+                <td class="c-score" id="out-c-score"></td>
+                <td class="d-score" id="out-d-score"></td>
+                <td class="net-score" id="out-nett-score"></td>
+                <td class="points" id="out-points"></td>
+                <td class="red-yards" id="out-red-yards">2867</td>
+                <td class="red-par" id="out-red-par">37</td>
+                <td class="empty"></td>
+            </tr>
+            <tr>
+                <td class="hole-num">10</td>
+                <td class="marker-score" id="h10-marker-score"></td>
+                <td class="white-yards" id="h10-white-yards">407</td>
+                <td class="yellow-yards" id="h10-yellow-yards">394</td>
+                <td class="par" id="h10-par">4</td>
+                <td class="si" id="h10-si">2</td>
+                <td class="a-score" id="h10-a-score"></td>
+                <td class="b-score"id="h10-b-score"></td>
+                <td class="c-score" id="h10-c-score"></td>
+                <td class="d-score" id="h10-d-score"></td>
+                <td class="net-score" id="h10-nett-score"></td>
+                <td class="points" id="h10-points"></td>
+                <td class="red-yards" id="h10-red-yards">342</td>
+                <td class="red-par" id="h10-red-par">4</td>
+                <td class="red-si" id="h10-red-si">6</td>
+            </tr>
+            <tr>
+                <td class="hole-num">11</td>
+                <td class="marker-score" id="h11-marker-score"></td>
+                <td class="white-yards" id="h11-white-yards">307</td>
+                <td class="yellow-yards" id="h11-yellow-yards">294</td>
+                <td class="par" id="h11-par">4</td>
+                <td class="si" id="h11-si">14</td>
+                <td class="a-score" id="h11-a-score"></td>
+                <td class="b-score"id="h11-b-score"></td>
+                <td class="c-score" id="h11-c-score"></td>
+                <td class="d-score" id="h11-d-score"></td>
+                <td class="net-score" id="h11-nett-score"></td>
+                <td class="points" id="h11-points"></td>
+                <td class="red-yards" id="h11-red-yards">241</td>
+                <td class="red-par" id="h11-red-par">4</td>
+                <td class="red-si" id="h11-red-si">14</td>
+            </tr>
+            <tr>
+                <td class="hole-num">12</td>
+                <td class="marker-score" id="h12-marker-score"></td>
+                <td class="white-yards" id="h12-white-yards">318</td>
+                <td class="yellow-yards" id="h12-yellow-yards">285</td>
+                <td class="par" id="h11-par">4</td>
+                <td class="si" id="h11-si">12</td>
+                <td class="a-score" id="h12-a-score"></td>
+                <td class="b-score"id="h12-b-score"></td>
+                <td class="c-score" id="h12-c-score"></td>
+                <td class="d-score" id="h12-d-score"></td>
+                <td class="net-score" id="h12-nett-score"></td>
+                <td class="points" id="h12-points"></td>
+                <td class="red-yards" id="h12-red-yards">285</td>
+                <td class="red-par" id="h12-red-par">4</td>
+                <td class="red-si" id="h12-red-si">12</td>
+            </tr>
+            <tr>
+                <td class="hole-num">13</td>
+                <td class="marker-score" id="h13-marker-score"></td>
+                <td class="white-yards" id="h13-white-yards">502</td>
+                <td class="yellow-yards" id="h13-yellow-yards">468</td>
+                <td class="par" id="h13-par">5</td>
+                <td class="si" id="h13-si">6</td>
+                <td class="a-score" id="h13-a-score"></td>
+                <td class="b-score"id="h13-b-score"></td>
+                <td class="c-score" id="h13-c-score"></td>
+                <td class="d-score" id="h13-d-score"></td>
+                <td class="net-score" id="h13-nett-score"></td>
+                <td class="points" id="h13-points"></td>
+                <td class="red-yards" id="h13-red-yards">441</td>
+                <td class="red-par" id="h13-red-par">5</td>
+                <td class="red-si" id="h13-red-si">2</td>
+            </tr>
+            <tr>
+                <td class="hole-num">14</td>
+                <td class="marker-score" id="h14-marker-score"></td>
+                <td class="white-yards" id="h14-white-yards">144</td>
+                <td class="yellow-yards" id="h14-yellow-yards">138</td>
+                <td class="par" id="h14-par">3</td>
+                <td class="si" id="h14-si">16</td>
+                <td class="a-score" id="h14-a-score"></td>
+                <td class="b-score"id="h14-b-score"></td>
+                <td class="c-score" id="h14-c-score"></td>
+                <td class="d-score" id="h14-d-score"></td>
+                <td class="net-score" id="h14-nett-score"></td>
+                <td class="points" id="h14-points"></td>
+                <td class="red-yards" id="h14-red-yards">137</td>
+                <td class="red-par" id="h14-red-par">3</td>
+                <td class="red-si" id="h14-red-si">18</td>
+            </tr>
+            <tr>
+                <td class="hole-num">15</td>
+                <td class="marker-score" id="h15-marker-score"></td>
+                <td class="white-yards" id="h15-white-yards">339</td>
+                <td class="yellow-yards" id="h15-yellow-yards">332</td>
+                <td class="par" id="h15-par">4</td>
+                <td class="si" id="h15-si">10</td>
+                <td class="a-score" id="h15-a-score"></td>
+                <td class="b-score"id="h15-b-score"></td>
+                <td class="c-score" id="h15-c-score"></td>
+                <td class="d-score" id="h15-d-score"></td>
+                <td class="net-score" id="h15-nett-score"></td>
+                <td class="points" id="h15-points"></td>
+                <td class="red-yards" id="h15-red-yards">326</td>
+                <td class="red-par" id="h14-red-par">4</td>
+                <td class="red-si" id="h14-red-si">8</td>
+            </tr>
+            <tr>
+                <td class="hole-num">16</td>
+                <td class="marker-score" id="h16-marker-score"></td>
+                <td class="white-yards" id="h16-white-yards">407</td>
+                <td class="yellow-yards" id="h16-yellow-yards">392</td>
+                <td class="par" id="h16-par">4</td>
+                <td class="si" id="h16-si">4</td>
+                <td class="a-score" id="h16-a-score"></td>
+                <td class="b-score"id="h16-b-score"></td>
+                <td class="c-score" id="h16-c-score"></td>
+                <td class="d-score" id="h16-d-score"></td>
+                <td class="net-score" id="h16-nett-score"></td>
+                <td class="points" id="h16-points"></td>
+                <td class="red-yards" id="h16-red-yards">370</td>
+                <td class="red-par" id="h16-red-par">4</td>
+                <td class="red-si" id="h16-red-si">4</td>
+            </tr>
+            <tr>
+                <td class="hole-num">17</td>
+                <td class="marker-score" id="h17-marker-score"></td>
+                <td class="white-yards" id="h17-white-yards">131/103</td>
+                <td class="yellow-yards" id="h17-yellow-yards">122/103</td>
+                <td class="par" id="h17-par">3</td>
+                <td class="si" id="h17-si">18</td>
+                <td class="a-score" id="h17-a-score"></td>
+                <td class="b-score"id="h17-b-score"></td>
+                <td class="c-score" id="h17-c-score"></td>
+                <td class="d-score" id="h17-d-score"></td>
+                <td class="net-score" id="h17-nett-score"></td>
+                <td class="points" id="h17-points"></td>
+                <td class="red-yards" id="h17-red-yards">114/103</td>
+                <td class="red-par" id="h17-red-par">3</td>
+                <td class="red-si" id="h17-red-si">16</td>
+            </tr>
+            <tr>
+                <td class="hole-num">18</td>
+                <td class="marker-score" id="h18-marker-score"></td>
+                <td class="white-yards" id="h18-white-yards">512</td>
+                <td class="yellow-yards" id="h18-yellow-yards">475</td>
+                <td class="par" id="h18-par">5</td>
+                <td class="si" id="h18-si">8</td>
+                <td class="a-score" id="h18-a-score"></td>
+                <td class="b-score"id="h18-b-score"></td>
+                <td class="c-score" id="h18-c-score"></td>
+                <td class="d-score" id="h18-d-score"></td>
+                <td class="net-score" id="h18-nett-score"></td>
+                <td class="points" id="h18-points"></td>
+                <td class="red-yards" id="h18-red-yards">432</td>
+                <td class="red-par" id="h18-red-par">5</td>
+                <td class="red-si" id="h18-red-si">10</td>
+            </tr>
+            <tr>
+                <td class="empty"></td>
+                <td class="marker-score" id="in-marker-score"></td>
+                <td class="white-yards" id="in-white-yards">3067</td>
+                <td class="yellow-yards" id="in-yellow-yards">2900</td>
+                <td class="par" id="in-par">36</td>
+                <td class="heading">IN</td>
+                <td class="a-score" id="in-a-score"></td>
+                <td class="b-score"id="in-b-score"></td>
+                <td class="c-score" id="in-c-score"></td>
+                <td class="d-score" id="in-d-score"></td>
+                <td class="net-score" id="in-nett-score"></td>
+                <td class="points" id="in-points"></td>
+                <td class="red-yards" id="in-red-yards">2688</td>
+                <td class="red-par" id="h18-red-par">36</td>
+                <td class="red-si" id="h18-red-si"></td>
+            </tr>
+            <tr>
+                <td class="empty"></td>
+                <td class="marker-score" id="out-marker-score"></td>
+                <td class="white-yards" id="out-white-yards">3143</td>
+                <td class="yellow-yards" id="out-yellow-yards">3004</td>
+                <td class="par" id="out-par">36</td>
+                <td class="heading">OUT</td>
+                <td class="a-score" id="out-a-score"></td>
+                <td class="b-score"id="out-b-score"></td>
+                <td class="c-score" id="out-c-score"></td>
+                <td class="d-score" id="out-d-score"></td>
+                <td class="net-score" id="out-nett-score"></td>
+                <td class="points" id="out-points"></td>
+                <td class="red-yards" id="out-red-yards">2867</td>
+                <td class="red-par" id="out-red-par">37</td>
+                <td class="empty"></td>
+            </tr>
+            <tr>
+                <td class="empty"></td>
+                <td class="marker-score" id="total-marker-score"></td>
+                <td class="white-yards" id="total-white-yards">6210</td>
+                <td class="yellow-yards" id="total-yellow-yards">5904</td>
+                <td class="par" id="total-par">72</td>
+                <td class="heading">TOTAL</td>
+                <td class="a-score" id="total-a-score"></td>
+                <td class="b-score"id="total-b-score"></td>
+                <td class="c-score" id="total-c-score"></td>
+                <td class="d-score" id="total-d-score"></td>
+                <td class="net-score" id="total-nett-score"></td>
+                <td class="points" id="total-points"></td>
+                <td class="red-yards" id="total-red-yards">5555</td>
+                <td class="red-par" id="total-red-par">73</td>
+                <td class="empty"></td>
+            </tr>
+            <tr>
+                <td colspan="6" align="right">Handicap</td>
+                <td class="handicap" id="a-handicap"></td>
+                <td class="handicap" id="b-handicap"></td>
+                <td class="handicap" id="c-handicap"></td>
+                <td class="handicap" id="d-handicap"></td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td colspan="3" rowspan="2" valign="top" align="center">Score/Points:</td>
+
+            </tr>
+            <tr>
+                <td colspan="6" align="right">Nett</td>
+                <td class="score" id="nett-a-score"></td>
+                <td class="score" id="nett-b-score"></td>
+                <td class="score" id="nett-c-score"></td>
+                <td class="score" id="nett-d-score"></td>
+                <td></td>
+                <td></td>
+
+
+    </tr>
+        </table>
+    </body>
+    <footer>
+        <p>Marker's Signature:</p>
+        <p>Player's Signature:</p>
+    </footer>
+</html>
