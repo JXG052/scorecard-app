@@ -4,6 +4,10 @@
     text-align: center;
     font-weight: bold;   
 }
+input{
+    font-family: 'Indie Flower', cursive;
+    font-size: 16pt;
+}
 body{
     background-image:url(../images/augusta.jpg);
     background-repeat: no-repeat;
