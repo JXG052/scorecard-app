@@ -21,18 +21,69 @@ let h17aScore = document.getElementById("h17a-score")
 let h18aScore = document.getElementById("h18a-score")
 let inaScoreEl = document.getElementById("in-a-score")
 let totalaScore = document.getElementById("total-a-score")
-const scoreInputs = document.querySelectorAll(".a-score-input")
-scoreInputs.forEach(function (inputEl) {
+let totalbScore = document.getElementById("total-b-score")
+let totalcScore = document.getElementById("total-c-score")
+let totaldScore = document.getElementById("total-d-score")
+const scoreInputsA = document.querySelectorAll(".a-score-input")
+const scoreInputsB = document.querySelectorAll(".b-score-input")
+const scoreInputsC = document.querySelectorAll(".c-score-input")
+const scoreInputsD = document.querySelectorAll(".d-score-input")
+
+scoreInputsD.forEach(function (inputEl) {
     inputEl.addEventListener("change", function (e) {
-        getTotalScores()
+        getTotalScoresD()
+    })
+})
+function getTotalScoresD() {
+    let result = 0
+    for (let i = 0; i < scoreInputsD.length; i++) {
+    if(scoreInputsD[i].value){
+        result += parseInt(scoreInputsD[i].value)}
+    }
+    totaldScore.textContent = result
+}
+
+scoreInputsC.forEach(function (inputEl) {
+    inputEl.addEventListener("change", function (e) {
+        getTotalScoresC()
     })
 })
 
-function getTotalScores() {
+function getTotalScoresC() {
     let result = 0
-    for (let i = 0; i < scoreInputs.length; i++) {
-    if(scoreInputs[i].value){
-        result += parseInt(scoreInputs[i].value)}
+    for (let i = 0; i < scoreInputsC.length; i++) {
+    if(scoreInputsC[i].value){
+        result += parseInt(scoreInputsC[i].value)}
+    }
+    totalcScore.textContent = result
+}
+
+scoreInputsB.forEach(function (inputEl) {
+    inputEl.addEventListener("change", function (e) {
+        getTotalScoresB()
+    })
+})
+
+function getTotalScoresB() {
+    let result = 0
+    for (let i = 0; i < scoreInputsB.length; i++) {
+    if(scoreInputsB[i].value){
+        result += parseInt(scoreInputsB[i].value)}
+    }
+    totalbScore.textContent = result
+}
+
+scoreInputsA.forEach(function (inputEl) {
+    inputEl.addEventListener("change", function (e) {
+        getTotalScoresA()
+    })
+})
+
+function getTotalScoresA() {
+    let result = 0
+    for (let i = 0; i < scoreInputsA.length; i++) {
+    if(scoreInputsA[i].value){
+        result += parseInt(scoreInputsA[i].value)}
     }
     totalaScore.textContent = result
 }
@@ -51,87 +102,87 @@ function getTotalScores() {
 //     totalaScore.textContent = playeraScore
 //     outaScoreEl.textContent = playeraScore
 //     })
-h4aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h4aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h5aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h5aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h6aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h6aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h7aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h7aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h8aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h8aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h9aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h9aScore.value)
-    totalaScore.textContent = playeraScore
-    outaScoreEl.textContent = playeraScore
-})
-h10aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h10aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h10aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h11aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h11aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h11aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h12aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h12aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h12aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h13aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h13aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h13aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h14aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h14aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h14aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h15aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h15aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h15aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h16aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h16aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h16aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h17aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h17aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h17aScore.value)
-    inaScoreEl.textContent = inaScore
-})
-h18aScore.addEventListener("change", function () {
-    playeraScore += parseInt(h18aScore.value)
-    totalaScore.textContent = playeraScore
-    inaScore += parseInt(h18aScore.value)
-    inaScoreEl.textContent = inaScore
-})
+// h4aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h4aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h5aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h5aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h6aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h6aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h7aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h7aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h8aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h8aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h9aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h9aScore.value)
+//     totalaScore.textContent = playeraScore
+//     outaScoreEl.textContent = playeraScore
+// })
+// h10aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h10aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h10aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h11aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h11aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h11aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h12aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h12aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h12aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h13aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h13aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h13aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h14aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h14aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h14aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h15aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h15aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h15aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h16aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h16aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h16aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h17aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h17aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h17aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
+// h18aScore.addEventListener("change", function () {
+//     playeraScore += parseInt(h18aScore.value)
+//     totalaScore.textContent = playeraScore
+//     inaScore += parseInt(h18aScore.value)
+//     inaScoreEl.textContent = inaScore
+// })
