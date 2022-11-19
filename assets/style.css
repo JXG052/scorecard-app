@@ -4,6 +4,8 @@
     text-align: center;
     font-weight: bold;   
 }
+.name-input,
+.score,
 input{
     font-family: 'Indie Flower', cursive;
     font-size: 16pt;
