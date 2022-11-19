@@ -24,11 +24,9 @@ let totalaScore = document.getElementById("total-a-score")
 const scoreInputs = document.querySelectorAll(".a-score-input")
 scoreInputs.forEach(function (inputEl) {
     inputEl.addEventListener("change", function (e) {
-        console.log(e.target.value)
         getTotalScores()
     })
 })
-
 
 function getTotalScores() {
     let result = 0
@@ -36,7 +34,6 @@ function getTotalScores() {
     if(scoreInputs[i].value){
         result += parseInt(scoreInputs[i].value)}
     }
-    console.log(result)
     totalaScore.textContent = result
 }
 //  h1aScore.addEventListener("change", function(){
