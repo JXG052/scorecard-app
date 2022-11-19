@@ -32,15 +32,16 @@ const scoreInputsD = document.querySelectorAll(".d-score-input")
 const scoreInputsM = document.querySelectorAll(".marker-score-input")
 
 scoreInputsM.forEach(function (inputEl) {
-    inputEl.addEventListener("change", function (e){
+    inputEl.addEventListener("change", function (e) {
         getTotalScoresM()
     })
 })
 function getTotalScoresM() {
     let result = 0
     for (let i = 0; i < scoreInputsM.length; i++) {
-    if(scoreInputsM[i].value){
-        result += parseInt(scoreInputsM[i].value)}
+        if (scoreInputsM[i].value) {
+            result += parseInt(scoreInputsM[i].value)
+        }
     }
     totalmScore.textContent = result
 }
@@ -53,8 +54,9 @@ scoreInputsD.forEach(function (inputEl) {
 function getTotalScoresD() {
     let result = 0
     for (let i = 0; i < scoreInputsD.length; i++) {
-    if(scoreInputsD[i].value){
-        result += parseInt(scoreInputsD[i].value)}
+        if (scoreInputsD[i].value) {
+            result += parseInt(scoreInputsD[i].value)
+        }
     }
     totaldScore.textContent = result
 }
@@ -68,8 +70,9 @@ scoreInputsC.forEach(function (inputEl) {
 function getTotalScoresC() {
     let result = 0
     for (let i = 0; i < scoreInputsC.length; i++) {
-    if(scoreInputsC[i].value){
-        result += parseInt(scoreInputsC[i].value)}
+        if (scoreInputsC[i].value) {
+            result += parseInt(scoreInputsC[i].value)
+        }
     }
     totalcScore.textContent = result
 }
@@ -83,8 +86,9 @@ scoreInputsB.forEach(function (inputEl) {
 function getTotalScoresB() {
     let result = 0
     for (let i = 0; i < scoreInputsB.length; i++) {
-    if(scoreInputsB[i].value){
-        result += parseInt(scoreInputsB[i].value)}
+        if (scoreInputsB[i].value) {
+            result += parseInt(scoreInputsB[i].value)
+        }
     }
     totalbScore.textContent = result
 }
@@ -98,8 +102,9 @@ scoreInputsA.forEach(function (inputEl) {
 function getTotalScoresA() {
     let result = 0
     for (let i = 0; i < scoreInputsA.length; i++) {
-    if(scoreInputsA[i].value){
-        result += parseInt(scoreInputsA[i].value)}
+        if (scoreInputsA[i].value) {
+            result += parseInt(scoreInputsA[i].value)
+        }
     }
     totalaScore.textContent = result
 }
