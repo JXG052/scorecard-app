@@ -24,10 +24,26 @@ let totalaScore = document.getElementById("total-a-score")
 let totalbScore = document.getElementById("total-b-score")
 let totalcScore = document.getElementById("total-c-score")
 let totaldScore = document.getElementById("total-d-score")
+let totalmScore = document.getElementById("total-marker-score")
 const scoreInputsA = document.querySelectorAll(".a-score-input")
 const scoreInputsB = document.querySelectorAll(".b-score-input")
 const scoreInputsC = document.querySelectorAll(".c-score-input")
 const scoreInputsD = document.querySelectorAll(".d-score-input")
+const scoreInputsM = document.querySelectorAll(".marker-score-input")
+
+scoreInputsM.forEach(function (inputEl) {
+    inputEl.addEventListener("change", function (e){
+        getTotalScoresM()
+    })
+})
+function getTotalScoresM() {
+    let result = 0
+    for (let i = 0; i < scoreInputsM.length; i++) {
+    if(scoreInputsM[i].value){
+        result += parseInt(scoreInputsM[i].value)}
+    }
+    totalmScore.textContent = result
+}
 
 scoreInputsD.forEach(function (inputEl) {
     inputEl.addEventListener("change", function (e) {
