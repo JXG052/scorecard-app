@@ -31,38 +31,108 @@ const scoreInputsC = document.querySelectorAll(".c-score-input")
 const scoreInputsD = document.querySelectorAll(".d-score-input")
 const scoreInputsM = document.querySelectorAll(".marker-score-input")
 const handicapInputA = document.getElementById("a-handicap-input")
+const handicapInputB = document.getElementById("b-handicap-input")
+const handicapInputC = document.getElementById("c-handicap-input")
+const handicapInputD = document.getElementById("d-handicap-input")
 let handicapAllowance = 0.95
 let playingHandicapAEl = document.getElementById("player-a-playing-handicap")
+let playingHandicapBEl = document.getElementById("player-b-playing-handicap")
+let playingHandicapCEl = document.getElementById("player-c-playing-handicap")
+let playingHandicapDEl = document.getElementById("player-d-playing-handicap")
 let courseRatingWhite = 70.4
 let courseRatingYellow = 69.3
 let slopeRatingWhite = 132
 let slopeRatingYellow= 125
 let slopeRatingRed = 112 //guessed need to change
-let courseHandicapEl = document.getElementById("player-a-course-handicap")
+let courseHandicapAEl = document.getElementById("player-a-course-handicap")
+let courseHandicapBEl = document.getElementById("player-b-course-handicap")
+let courseHandicapCEl = document.getElementById("player-c-course-handicap")
+let courseHandicapDEl = document.getElementById("player-d-course-handicap")
 let userDisplay = document.getElementById("user-display")
 
 handicapInputA.addEventListener("change", function (e) {
         getHandicapA()
     })
-
 function getHandicapA(){
-	let result = 0
-    if (document.getElementById("white-tee").checked){
-        result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
-        courseHandicapEl.textContent = result
-        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
-    } else if (document.getElementById("yellow-tee").checked){	
-        result = Math.round(handicapInputA.value *(slopeRatingYellow/113))
-        courseHandicapEl.textContent = result
-        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
-    } else if (document.getElementById("red-tee").checked){
-        result = Math.round(handicapInputA.value *(slopeRatingRed/113))
-        courseHandicapEl.textContent = result
-        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
-    } else {
-        userDisplay.textContent = "please select what tee's player A is using"
-    }
+        let result = 0
+        if (document.getElementById("white-tee").checked){
+            result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
+            courseHandicapAEl.textContent = result
+            playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("yellow-tee").checked){	
+            result = Math.round(handicapInputA.value *(slopeRatingYellow/113))
+            courseHandicapAEl.textContent = result
+            playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("red-tee").checked){
+            result = Math.round(handicapInputA.value *(slopeRatingRed/113))
+            courseHandicapAEl.textContent = result
+            playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+        } else {
+            userDisplay.textContent = "please select what tee's player A is using"
+        }
 }
+
+handicapInputB.addEventListener("change", function (e) {
+        getHandicapB()
+    })
+
+    function getHandicapB(){
+        let result = 0
+        if (document.getElementById("white-tee").checked){
+            result = Math.round(handicapInputB.value *(slopeRatingWhite/113))
+            courseHandicapBEl.textContent = result
+            playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("yellow-tee").checked){	
+            result = Math.round(handicapInputB.value *(slopeRatingYellow/113))
+            courseHandicapBEl.textContent = result
+            playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("red-tee").checked){
+            result = Math.round(handicapInputA.value *(slopeRatingRed/113))
+            courseHandicapBEl.textContent = result
+            playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+        }
+    }
+
+    handicapInputC.addEventListener("change", function (e) {
+        getHandicapC()
+    })
+
+    function getHandicapC(){
+        let result = 0
+        if (document.getElementById("white-tee").checked){
+            result = Math.round(handicapInputC.value *(slopeRatingWhite/113))
+            courseHandicapCEl.textContent = result
+            playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("yellow-tee").checked){	
+            result = Math.round(handicapInputC.value *(slopeRatingYellow/113))
+            courseHandicapCEl.textContent = result
+            playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("red-tee").checked){
+            result = Math.round(handicapInputA.value *(slopeRatingRed/113))
+            courseHandicapCEl.textContent = result
+            playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+        }
+    }
+    handicapInputD.addEventListener("change", function (e) {
+        getHandicapD()
+    })
+
+    function getHandicapD(){
+        let result = 0
+        if (document.getElementById("white-tee").checked){
+            result = Math.round(handicapInputD.value *(slopeRatingWhite/113))
+            courseHandicapDEl.textContent = result
+            playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("yellow-tee").checked){	
+            result = Math.round(handicapInputD.value *(slopeRatingYellow/113))
+            courseHandicapDEl.textContent = result
+            playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+        } else if (document.getElementById("red-tee").checked){
+            result = Math.round(handicapInputA.value *(slopeRatingRed/113))
+            courseHandicapDEl.textContent = result
+            playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+        }
+    }
 
 scoreInputsM.forEach(function (inputEl) {
     inputEl.addEventListener("change", function (e) {
