@@ -39,6 +39,7 @@ let slopeRatingWhite = 132
 let slopeRatingYellow= 125
 let slopeRatingRed = 112 //guessed need to change
 let courseHandicapEl = document.getElementById("player-a-course-handicap")
+let userDisplay = document.getElementById("user-display")
 
 handicapInputA.addEventListener("change", function (e) {
         getHandicapA()
@@ -59,7 +60,7 @@ function getHandicapA(){
         courseHandicapEl.textContent = result
         playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
     } else {
-        console.log("please select what tee's player A is using")
+        userDisplay.textContent = "please select what tee's player A is using"
     }
 }
 
