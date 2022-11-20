@@ -9,6 +9,13 @@ label{
     opacity: 0.0;
 }
 
+#user-display {
+	font-size:20px;
+    margin: 0px auto;
+
+}
+
+
 .name-input,
 .score,
 input{
