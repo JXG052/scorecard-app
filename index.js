@@ -30,6 +30,23 @@ const scoreInputsB = document.querySelectorAll(".b-score-input")
 const scoreInputsC = document.querySelectorAll(".c-score-input")
 const scoreInputsD = document.querySelectorAll(".d-score-input")
 const scoreInputsM = document.querySelectorAll(".marker-score-input")
+const handicapInputA = document.getElementById("a-handicap-input")
+
+
+let courseRatingWhite = 70.4
+let courseRatingYellow = 69.3
+let slopeRatingWhite = 132
+let slopeRatingYellow= 125
+let courseHandicapEl = document.getElementById("player-a-course-handicap")
+
+handicapInputA.addEventListener("change", function (e) {
+        getCourseHandicapA()
+    })
+
+function getCourseHandicapA(){
+	let result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
+	courseHandicapEl.textContent = result	
+	}
 
 scoreInputsM.forEach(function (inputEl) {
     inputEl.addEventListener("change", function (e) {
