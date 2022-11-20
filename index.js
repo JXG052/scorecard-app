@@ -68,7 +68,7 @@ function getHandicapA(){
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
         } else {
-            userDisplay.textContent = "please select what tee's player A is using"
+            userDisplay.textContent = "please select tee's"
         }
 }
 
@@ -90,6 +90,8 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapBEl.textContent = result
             playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+        } else {
+            userDisplay.textContent = "please select tee's"
         }
     }
 
@@ -111,6 +113,8 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapCEl.textContent = result
             playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+        } else {
+            userDisplay.textContent = "please select tee's"
         }
     }
     handicapInputD.addEventListener("change", function (e) {
@@ -131,6 +135,8 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapDEl.textContent = result
             playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+        } else {
+            userDisplay.textContent = "please select tee's"
         }
     }
 
