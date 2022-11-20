@@ -31,8 +31,8 @@ const scoreInputsC = document.querySelectorAll(".c-score-input")
 const scoreInputsD = document.querySelectorAll(".d-score-input")
 const scoreInputsM = document.querySelectorAll(".marker-score-input")
 const handicapInputA = document.getElementById("a-handicap-input")
-
-
+let handicapAllowance = 0.95
+let playingHandicapAEl = document.getElementById("player-a-playing-handicap")
 let courseRatingWhite = 70.4
 let courseRatingYellow = 69.3
 let slopeRatingWhite = 132
@@ -41,20 +41,23 @@ let slopeRatingRed = 112 //guessed need to change
 let courseHandicapEl = document.getElementById("player-a-course-handicap")
 
 handicapInputA.addEventListener("change", function (e) {
-        getCourseHandicapA()
+        getHandicapA()
     })
 
-function getCourseHandicapA(){
+function getHandicapA(){
 	let result = 0
     if (document.getElementById("white-tee").checked){
         result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
         courseHandicapEl.textContent = result
+        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
     } else if (document.getElementById("yellow-tee").checked){	
         result = Math.round(handicapInputA.value *(slopeRatingYellow/113))
         courseHandicapEl.textContent = result
+        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
     } else if (document.getElementById("red-tee").checked){
         result = Math.round(handicapInputA.value *(slopeRatingRed/113))
         courseHandicapEl.textContent = result
+        playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
     } else {
         console.log("please select what tee's player A is using")
     }
