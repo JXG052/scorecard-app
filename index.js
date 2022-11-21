@@ -55,6 +55,8 @@ let cHandicap = document.getElementById("c-handicap")
 let dHandicap = document.getElementById("d-handicap")
 
 
+let aHandicap = document.getElementById("a-handicap")
+
 handicapInputA.addEventListener("change", function (e) {
         getHandicapA()
     })
@@ -227,11 +229,13 @@ scoreInputsA.forEach(function (inputEl) {
 
 function getTotalScoresA() {
     let result = 0
+    let outResult = 0
     for (let i = 0; i < scoreInputsA.length; i++) {
-        if (scoreInputsA[i].value) {
+        if (scoreInputsA[i].value && scoreInputsA.length < 9) {
             result += parseInt(scoreInputsA[i].value)
         }
     }
+
     totalaScore.textContent = result
 }
 //  h1aScore.addEventListener("change", function(){
