@@ -50,6 +50,8 @@ let courseHandicapCEl = document.getElementById("player-c-course-handicap")
 let courseHandicapDEl = document.getElementById("player-d-course-handicap")
 let userDisplay = document.getElementById("user-display")
 
+let aHandicap = document.getElementById("a-handicap")
+
 handicapInputA.addEventListener("change", function (e) {
         getHandicapA()
     })
@@ -59,14 +61,17 @@ function getHandicapA(){
             result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("yellow-tee").checked){	
             result = Math.round(handicapInputA.value *(slopeRatingYellow/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("red-tee").checked){
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else {
             userDisplay.textContent = "please select tee's"
         }
@@ -210,11 +215,13 @@ scoreInputsA.forEach(function (inputEl) {
 
 function getTotalScoresA() {
     let result = 0
+    let outResult = 0
     for (let i = 0; i < scoreInputsA.length; i++) {
-        if (scoreInputsA[i].value) {
+        if (scoreInputsA[i].value && scoreInputsA.length < 9) {
             result += parseInt(scoreInputsA[i].value)
         }
     }
+
     totalaScore.textContent = result
 }
 //  h1aScore.addEventListener("change", function(){
