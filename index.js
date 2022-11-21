@@ -49,6 +49,11 @@ let courseHandicapBEl = document.getElementById("player-b-course-handicap")
 let courseHandicapCEl = document.getElementById("player-c-course-handicap")
 let courseHandicapDEl = document.getElementById("player-d-course-handicap")
 let userDisplay = document.getElementById("user-display")
+let aHandicap = document.getElementById("a-handicap")
+let bHandicap = document.getElementById("b-handicap")
+let cHandicap = document.getElementById("c-handicap") 
+let dHandicap = document.getElementById("d-handicap")
+
 
 handicapInputA.addEventListener("change", function (e) {
         getHandicapA()
@@ -59,14 +64,17 @@ function getHandicapA(){
             result = Math.round(handicapInputA.value *(slopeRatingWhite/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("yellow-tee").checked){	
             result = Math.round(handicapInputA.value *(slopeRatingYellow/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("red-tee").checked){
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapAEl.textContent = result
             playingHandicapAEl.textContent = Math.round(result * handicapAllowance)
+            aHandicap.textContent = Math.round(result * handicapAllowance)
         } else {
             userDisplay.textContent = "please select tee's"
         }
@@ -82,14 +90,17 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputB.value *(slopeRatingWhite/113))
             courseHandicapBEl.textContent = result
             playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+            bHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("yellow-tee").checked){	
             result = Math.round(handicapInputB.value *(slopeRatingYellow/113))
             courseHandicapBEl.textContent = result
             playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+            bHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("red-tee").checked){
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapBEl.textContent = result
             playingHandicapBEl.textContent = Math.round(result * handicapAllowance)
+            bHandicap.textContent = Math.round(result * handicapAllowance)
         } else {
             userDisplay.textContent = "please select tee's"
         }
@@ -105,14 +116,17 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputC.value *(slopeRatingWhite/113))
             courseHandicapCEl.textContent = result
             playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+            cHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("yellow-tee").checked){	
             result = Math.round(handicapInputC.value *(slopeRatingYellow/113))
             courseHandicapCEl.textContent = result
             playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+            cHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("red-tee").checked){
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapCEl.textContent = result
             playingHandicapCEl.textContent = Math.round(result * handicapAllowance)
+            cHandicap.textContent = Math.round(result * handicapAllowance)
         } else {
             userDisplay.textContent = "please select tee's"
         }
@@ -127,17 +141,20 @@ handicapInputB.addEventListener("change", function (e) {
             result = Math.round(handicapInputD.value *(slopeRatingWhite/113))
             courseHandicapDEl.textContent = result
             playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+            dHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("yellow-tee").checked){	
             result = Math.round(handicapInputD.value *(slopeRatingYellow/113))
             courseHandicapDEl.textContent = result
             playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+            dHandicap.textContent = Math.round(result * handicapAllowance)
         } else if (document.getElementById("red-tee").checked){
             result = Math.round(handicapInputA.value *(slopeRatingRed/113))
             courseHandicapDEl.textContent = result
             playingHandicapDEl.textContent = Math.round(result * handicapAllowance)
+            dHandicap.textContent = Math.round(result * handicapAllowance)
         } else {
             userDisplay.textContent = "please select tee's"
-        }
+        }   
     }
 
 scoreInputsM.forEach(function (inputEl) {
