@@ -310,8 +310,7 @@ function getTotalScoresA() {
 //     totalaScore.textContent = playeraScore
 //     inaScore += parseInt(h16aScore.value)
 //     inaScoreEl.textContent = inaScore
-// })
-// h17aScore.addEventListener("change", function () {
+// }// h17aScore.addEventListener("change", function () {
 //     playeraScore += parseInt(h17aScore.value)
 //     totalaScore.textContent = playeraScore
 //     inaScore += parseInt(h17aScore.value)
